@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>{{titulo}}</h2>
+
+  <button class="btn btn-info" type="button" [routerLink]="['/users/form']"  > Add new user </button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">departmentName</th>
+        <th scope="col">departmentAddress</th>
+        <th scope="col">departmentCode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of userList">
+        <th scope="row">  {{users.userId }} </th>
+        <td> {{ users.name }} </td>
+        <td> {{ users.lastname }}  </td>
+        <td> {{ users.email }} </td>
+        <td> {{ users.departmentId }} </td>
+        <td> <button type="button" class="btn btn-primary" [routerLink]="['userDetails/', users.userId]"> see row </button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

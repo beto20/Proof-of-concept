@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="card-body">
+    <h5 class="card-title">{{titulo}}</h5>
+    <form >
+      <div class="form-group row">
+        <label for="departmentName" class="col-form-label col-sm-2">departmentName</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="departmentName" [(ngModel)]="department.departmentName">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="departmentAddress" class="col-form-label col-sm-2">departmentAddress</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="departmentAddress" [(ngModel)]="department.departmentAddress">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="departmentCode" class="col-form-label col-sm-2">departmentCode</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="departmentCode" [(ngModel)]="department.departmentCode">
+        </div>
+      </div>
+      <button class="btn btn-success" role="button" (click)='insertDepartment()'>Save department</button>
+      <button class="btn btn-danger" role="button" [routerLink]="['/departments']" >Back</button>
+    </form>
+  </div>
+
+</div>

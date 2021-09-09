@@ -1,0 +1,20 @@
+
+  <div class="container">
+    <h5>{{titulo}}</h5>
+    <div>
+      <p>userId: {{user.userId}}</p>
+      <p>name: {{user.name}}</p>
+      <p>lastname: {{user.lastname}}</p>
+      <p>email: {{user.email}}</p>
+      <p>departmentId: {{user.departmentId}}</p>
+    </div>
+      <h5>department from user</h5>
+    <div>
+      <p>departmentId: {{department.departmentId}}</p>
+      <p>departmentName: {{department.departmentName}}</p>
+      <p>departmentAddress: {{department.departmentAddress}}</p>
+      <p>departmentCode: {{department.departmentCode}}</p>
+    </div>
+    <button class="btn btn-danger" type="button" [routerLink]="['/users']" >Back to users</button>
+  </div>
+

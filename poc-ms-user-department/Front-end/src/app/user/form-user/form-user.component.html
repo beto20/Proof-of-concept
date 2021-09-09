@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="card-body">
+    <h5 class="card-title">{{titulo}}</h5>
+    <form >
+      <div class="form-group row">
+        <label for="name" class="col-form-label col-sm-2">name</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="name" [(ngModel)]="user.name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="lastname" class="col-form-label col-sm-2">lastname</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="lastname" [(ngModel)]="user.lastname">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-form-label col-sm-2">email</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="departmentId" class="col-form-label col-sm-2">departmentId</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="departmentId" [(ngModel)]="user.departmentId">
+        </div>
+      </div>
+      <button class="btn btn-success" role="button" (click)='insertUser()'>Save user</button>
+      <button class="btn btn-danger" role="button" [routerLink]="['/users']" >Back</button>
+    </form>
+  </div>
+
+</div>
