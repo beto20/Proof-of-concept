@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:~/student-kotlin;AUTO_SERVER=true
+    username: root
+    password: 1234
+    driver-class-name: org.h2.Driver
+  application:
+    name: STUDENT-SERVICE
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
