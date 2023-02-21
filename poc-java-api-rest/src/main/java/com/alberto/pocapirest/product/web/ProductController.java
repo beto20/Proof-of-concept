@@ -19,6 +19,11 @@ public class ProductController {
 
     private final ProductService productService;
 
+    @GetMapping("welcome")
+    String getWelcome() {
+        return "Welcome";
+    }
+
     @GetMapping
     Flux<ProductResponseDto> findAllProducts() {
         return productService.findAll();

@@ -1,8 +1,9 @@
 #springdoc:
 #  swagger-ui:
-#    path: /swagger-doc/swagger-ui.html
+#    path: /swagger-ui/index.html
+##    localhost:8080/api-docs
 #  api-docs:
-#    path: /swagger-doc/v3/api-docs
+#    path: /swagger-doc
 
 spring:
   data:
@@ -11,3 +12,6 @@ spring:
       host: localhost
       database: POC
 
+
+#server:
+#  port: 8080
