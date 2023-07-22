@@ -16,7 +16,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 @ApplicationScoped
 public class TopicSubs {
 
-    static String connectionString = "<<CONNECTION_STRING>>";
+    static String connectionString = "Endpoint=sb://quarkus-topic.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=3C6FTkK5ftrRl7ve3X56ZmPdSA2YpW95Q+ASbORpJA0=";
     static String topicName = "demo";
     static String subName = "demoSubs";
 
