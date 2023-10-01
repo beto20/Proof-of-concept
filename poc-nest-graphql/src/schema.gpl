@@ -1,0 +1,54 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type BookEntity {
+  id: Int!
+  title: String!
+  description: String
+  price: Float!
+  authorId: Int!
+}
+
+type AuthorEntity {
+  id: Int!
+  name: String!
+  lastname: String!
+  books: [BookEntity!]
+}
+
+type Query {
+  getBooks: [BookEntity!]!
+  getBookById(id: Int!): BookEntity!
+  findAll: [AuthorEntity!]!
+  author(id: Int!): AuthorEntity!
+}
+
+type Mutation {
+  insertBook(bookInput: BookInput!): BookEntity!
+  createAuthor(createAuthorInput: CreateAuthorInput!): AuthorEntity!
+  updateAuthor(updateAuthorInput: UpdateAuthorInput!, id: Float!): AuthorEntity!
+  removeAuthor(id: Int!): AuthorEntity!
+}
+
+input BookInput {
+  id: Float
+  title: String!
+  description: String
+  price: Float!
+  authorId: Float!
+}
+
+input CreateAuthorInput {
+  id: Float
+  name: String
+  lastname: String
+  books: [BookInput!]
+}
+
+input UpdateAuthorInput {
+  id: Float
+  name: String
+  lastname: String
+  books: [BookInput!]
+}
