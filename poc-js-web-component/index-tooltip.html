@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcomponent</title>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            /* Con guiones al inicio declaramos una variable para css */
+            /* --color-primary: rgb(233, 60, 204); */
+            font-family: sans-serif;
+        }
+
+        /*
+        div {
+            border: 3px solid black;
+        }
+        .highlight {
+            background: rgb(255, 187, 187);
+        }
+        alfa-tooltip {
+            border: 1px solid blue;
+            padding: 0.15rem;
+        }
+        */
+
+    </style>
+</head>
+<body>
+
+    <!-- Elemento template que no se renderiza automaticamente  -->
+    <template id="tooltip-template">
+        <!-- Elemento slot permite agregar un texto, ademas de asignar un texto por defecto -->
+        <slot>DEFAULT TEXT</slot>
+        <span> (?)</span>
+    </template>
+
+    <p><alfa-tooltip text="PROBANDO 1">Example MOCK</alfa-tooltip>mock!</p>
+    <alfa-tooltip text="TEXTO POR DEFECTO">TEXTO POR DEFECTO</alfa-tooltip>
+
+    <!-- <div>Este DIV no toma stilos del WC</div> -->
+
+    <a is="alfa-confirm-link" href="google.com">Google</a>
+
+    <br>
+
+    <alfa-tooltip text="MOCK 2" style="position: relative;"  class="important">
+        <span class="highlight">Componente</span>
+    </alfa-tooltip>
+
+</body>
+</html>

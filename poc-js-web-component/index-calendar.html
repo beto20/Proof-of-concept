@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #title {
+            color: rgb(78, 78, 78);
+        }
+
+        #isCheck {
+            visibility: hidden;
+            background-color: green;
+            color: azure;
+            font-size: 18px;
+            padding: 4px 7px 4px 7px;
+            border-radius: 7px;
+        }
+
+        #date-picker {
+            border-radius: 7px;
+            color: rgb(78, 78, 78);
+            font-size: 18px;
+        }
+
+        #date-picker:focus {
+            outline: none;
+        }
+
+        #cancel {
+            visibility: hidden;
+            background-color: rgb(255, 49, 49);
+            color: azure;
+            font-size: 15px;
+            border: none;
+            border-radius: 7px;
+            padding: 4px 7px 4px 7px;
+        }
+
+        #error-text {
+            color: red;
+            visibility: hidden;
+        }
+    </style>
+
+    <script src="custom-datepicker.js"></script>
+
+</head>
+<body>
+
+    <div>
+        <label id="title">Ingresar texto</label>
+    </div>
+    <div>
+        <input type="date" id="date-picker" onchange="date()" onkeydown="return false">
+        <span id="isCheck">✓</span>
+        <button onclick="clearDate()" id="cancel">✖</span>
+    </div>
+    <div>
+        <label id="error-text">Error texto</label>
+    </div>
+
+
+</body>
+</html>
